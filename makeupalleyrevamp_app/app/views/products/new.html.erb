@@ -1,0 +1,16 @@
+<h1>This is the Product New Page</h1>
+
+<h1> Tell us what you think! </h1>
+
+<%= form_for @product do |f| %>
+
+	<div>
+ 	<%= f.fields_for :review do |rc_fields| %>
+	   <%= rc_fields.text_field :title, placeholder: 'Title' %><br>
+	    <%= rc_fields.text_area :review, placeholder: 'Review' %>
+	</div>
+  		<%= f.submit "Submit Review" %>
+  	<% end %>
+<% end %>
+
+<% link_to 'Cancel', reviews_path %>
