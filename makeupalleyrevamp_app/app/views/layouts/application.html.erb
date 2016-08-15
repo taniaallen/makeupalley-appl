@@ -22,12 +22,6 @@
       Logged in as <strong><%= current_user.email %></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-      <div class="navbar">
-        <ul>
-          <li> <%= link_to "Product Reviews", products_path  %></li>
-          <li><%= link_to "Forum", products_path  %></li>
-        </ul>
-      </div>
 
     <% else %>
       <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
@@ -41,6 +35,17 @@
   	<% if alert %>
   	  <p class="alert alert-danger"><%= alert %></p>
   	<% end %>
+
+      <% if user_signed_in? %>
+
+    <nav>
+      <ul>
+          <li><%= link_to "Product Reviews", products_path  %></li>
+          <li><%= link_to "Forum", topics_path  %></li>
+      </ul>
+
+    </nav>
+ <% end %>
 
     <%= yield %>
 

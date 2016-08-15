@@ -1,0 +1,17 @@
+<section>
+	<p><%=comment.user.email %> replied:</p>
+	<p>posted: <%= comment.created_at %></p>
+	<p><%= comment.comment %> </p>
+
+	<!-- Signed in user can only edit and delete the reviews they created. If statement to check if user is signed and and that they match the user id stored on the individual review, then the edit and delete buttons will be visible. -->
+	<% if user_signed_in? %>
+
+		<% if comment.user_id == current_user.id %>
+
+		<%= link_to 'Edit', edit_topic_comment_path(comment.topic, comment) %>
+		<%= link_to 'Delete', topic_comment_path(comment.topic, comment), method: :delete, data: { 
+			confirm: "Are you sure?" } %>
+
+		<% end %>
+	<% end %>
+</section>
