@@ -10,6 +10,12 @@ class ProductsController < ApplicationController
 	def show
 		@user = current_user.id
 		@product = Product.find(params[:id])
+		# Assign an instance variable and make a conditional that evaluates how many reviews have been recorded. average out the total and round it.
+		if @product.reviews.blank?
+			@average_review = 0
+		else
+			@average_review = @product.reviews.average(:rating).round(2)
+		end
 	end
 
 	def new

@@ -1,8 +1,16 @@
 <%= form_for([@product, @product.reviews.build]) do |f| %>
 	<%= f.text_field :title, placeholder: 'Title' %><br>
 	<%= f.text_area :review, placeholder: 'Review'  %><br>
-	<%= f.number_field :rating, placeholder: 'Rating' %><br>
+	<!-- ID on div will be targeted by the script so that it will replace the original input for rating -->
+	<div id="rating-form"><label>Rating</label></div>
 	<%= f.submit "Submit Review" %>
 <% end %>
 
 
+<!-- script tag provided by Jacob Overgaard's raty-fa.js (details in README) -->
+<script>
+$('#rating-form').raty({
+	path: '/assets/',
+	scoreName: 'review[rating]'
+});
+</script>
