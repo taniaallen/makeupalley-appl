@@ -10,3 +10,11 @@ Product.create({
 	description: "Aveeno Ultracalming Daily Moisturizer with SPF 15 is clinically proven to reduce visible redness in as little as 1 week. Formulated with soothing botanicals including feverfew to calm and soothe irritated skin. Non-Comodogenic. Hypoallergenic. Gentle enough for everyday use.",
 	img: "https://img.makeupalley.com/2/9/8/2/959321.JPG"
 	})
+
+Review.create({
+	title: "It's Ok",
+	review: "Could have been better. I won't be repurchasing.",
+	rating: 3,
+	product_id: 1,
+	user_id: 1
+	})

@@ -2,8 +2,10 @@
 
 
 <% @products.each do |product| %>
-		<ul>
+		<ul class="products-list">
+			<%= link_to product do %>
 				<li><%= product.name %></li>
+			<% end %>
 		</ul>
 
 	

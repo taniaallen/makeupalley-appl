@@ -1,0 +1,8 @@
+<%= form_for([@product, @product.reviews.build]) do |f| %>
+	<%= f.text_field :title, placeholder: 'Title' %><br>
+	<%= f.text_area :review, placeholder: 'Review'  %><br>
+	<%= f.number_field :rating, placeholder: 'Rating' %><br>
+	<%= f.submit "Submit Review" %>
+<% end %>
+
+

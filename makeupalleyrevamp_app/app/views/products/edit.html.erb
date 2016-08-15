@@ -1,0 +1,17 @@
+<h1>This is the Product Edit Page</h1>
+
+<h1> Tell us what you think! </h1>
+
+<%= form_for @product do |f| %>
+
+	<div>
+ 	<%= f.fields_for :review do |rc_fields| %>
+	   <%= rc_fields.text_field :title, placeholder: 'Title' %><br>
+	    <%= rc_fields.text_area :review, placeholder: 'Review' %><br>
+	    <%= rc_fields.number_field :rating, placeholder: 'Rating' %><br>
+	</div>
+  		<%= f.submit "Submit Review" %>
+  	<% end %>
+<% end %>
+<br>
+<%= link_to 'Cancel and go back to Product', product_path(@product) %>

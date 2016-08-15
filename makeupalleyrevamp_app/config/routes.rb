@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'landings#index'
   resources :users
   resources :landings
-  resources :products
-  resources :reviews
+  resources :products do
+  	resources :reviews
+  end
 end

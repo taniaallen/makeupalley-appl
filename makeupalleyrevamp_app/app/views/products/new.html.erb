@@ -3,14 +3,13 @@
 <h1> Tell us what you think! </h1>
 
 <%= form_for @product do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
 
-	<div>
- 	<%= f.fields_for :review do |rc_fields| %>
-	   <%= rc_fields.text_field :title, placeholder: 'Title' %><br>
-	    <%= rc_fields.text_area :review, placeholder: 'Review' %>
-	</div>
-  		<%= f.submit "Submit Review" %>
-  	<% end %>
-<% end %>
-
-<% link_to 'Cancel', reviews_path %>
+<%= link_to "Back to Products", products_path %>

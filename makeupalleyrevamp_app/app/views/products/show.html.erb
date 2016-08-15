@@ -1,15 +1,14 @@
 <h2><%= @product.name %></h2>
+<img src="<%= @product.img %>"/>
 
 <div class="product-description">
 	<p><%= @product.description %></p>
 </div>
 
 <div class="write-review">
-	<%= link_to 'Write a Review', new_product_path %>
-</div>
-<div class="product-reviews">
-	<%= @product.reviews.each do |review| %>
-			<p><%= review.title %></p>
-			<p><%= review.review %></p>
-	<% end %>
+	<%= link_to 'Write a Review', new_product_review_path(@product) %>
+</div><br>
+
+<div>
+	<%= render 'review' %>
 </div>

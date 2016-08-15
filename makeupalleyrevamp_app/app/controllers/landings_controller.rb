@@ -17,3 +17,4 @@ class LandingsController < ApplicationController
 		p user
 		puts "============"
 	end
+end
