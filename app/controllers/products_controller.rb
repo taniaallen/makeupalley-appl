@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
 	def index
-		@user = current_user
+		@user = current_user.id
 		@products = Product.all
 
 		puts @products
