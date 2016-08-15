@@ -1,0 +1,10 @@
+<h1>Edit Your Review</h1>
+
+<%= form_for([@product, @review]) do |f| %>
+	<%= f.text_field :title %>
+	<%= f.text_area :review %>
+	<%= f.number_field :rating %>
+	<%= f.submit 'Update Review' %>
+<% end %>
+
+<%= link_to 'Cancel and return to product', product_path(@product) %>

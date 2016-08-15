@@ -1,10 +1,10 @@
- <h3> Reviews: </h3>
-  <% @product.reviews.each do |review| %>
-  	<section>
-      <p> Title: <%= review.title %> </p>
-      <p> Author: <%= review.user.email %> </p>
-      <p> <%= review.review %> </p>
-      <p> Rating: <%= review.rating %> </p>
-  	</section>
-  <% end %>
-</ul>
+<section>
+	<p> Title: <%= review.title %> </p>
+	<p> Author: <%= review.user.email %> </p>
+	<p> <%= review.review %> </p>
+	<p> Rating: <%= review.rating %> </p>
+
+	<%= link_to 'Edit', edit_product_review_path(review.product, review) %>
+	<%= link_to 'Delete', product_review_path(review.product, review), method: :delete, data: { 
+		confirm: "Are you sure?" } %>
+</section>

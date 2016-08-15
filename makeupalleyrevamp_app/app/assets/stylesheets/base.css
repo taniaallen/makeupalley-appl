@@ -1,4 +1,4 @@
-/* Styling for sign_up and login */
+/* Styling for header and basic styling*/
 
 body {
 	text-align: center;
@@ -13,6 +13,16 @@ header {
 	padding-bottom: 30%;
 	top: 0;
 	
+}
+
+ul li {
+	list-style-type: none;
+	text-align: left;
+}
+
+img {
+	width: 400px;
+	height: 400px;
 }
 
 .hero-title {
@@ -30,4 +40,12 @@ h2 {
 
 .new_user {
 	margin-bottom: 5%;
+}
+
+.navbar {
+	display: inline-block;
+}
+
+.navbar ul li {
+	float: left;
 }
