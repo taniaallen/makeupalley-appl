@@ -1,0 +1,14 @@
+<h2><%= @product.name %></h2>
+<img src="<%= @product.img %>"/>
+
+<div class="product-description">
+	<p><%= @product.description %></p>
+</div>
+
+<div class="write-review">
+	<%= link_to 'Write a Review', new_product_review_path(@product) %>
+</div><br>
+
+<div>
+	<%= render 'review' %>
+</div>

@@ -1,0 +1,12 @@
+<h2>Products Index</h2>
+
+
+<% @products.each do |product| %>
+		<ul class="products-list">
+			<%= link_to product do %>
+				<li><%= product.name %></li>
+			<% end %>
+		</ul>
+
+	
+<% end %>
