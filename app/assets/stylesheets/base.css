@@ -6,7 +6,7 @@ body {
 }
 
 header {
-	background: url("crushed-makeup.jpg");
+	background: url("./images/crushed-makeup.jpg");
 	background-size: cover;
 	background-position: center;
 	width: 100%;

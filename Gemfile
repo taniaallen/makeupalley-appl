@@ -49,3 +49,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # TANIA'S addition: devise for users
 gem 'devise'
+ruby '2.2.4'
