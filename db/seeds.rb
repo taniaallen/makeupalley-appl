@@ -18,3 +18,8 @@ Review.create({
 	product_id: 1,
 	user_id: 1
 	})
+
+Topic.create({
+	title: "What is your favorite drugstore foundation?",
+	content: "Hi everyone! I'm new to this makeup thing and I want to start using some but I need a little guidance. I have a small budget and I plan on building my starter set from items I can find at the drugstore. So my question is: What is your favorite drugstore foundation for acne prone skin??"
+	})

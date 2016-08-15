@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   root to: 'landings#index'
   resources :users
   resources :landings
+  # Nest the reviews routes under the product routes so that the Reviews controller can be used for review actions 
   resources :products do
   	resources :reviews
+  end
+  # Nest the routes for comments under topics so that the Comments controller can be used for comment actions
+  resources :topics do
+  	resources :comments
   end
 end

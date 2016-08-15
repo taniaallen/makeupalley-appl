@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
 	before_action :find_product
+	before_action :find_review, only: [:edit, :update, :destroy]
 
 	def index
 		@reviews = Review.all
@@ -15,6 +16,7 @@ class ReviewsController < ApplicationController
 
 	def create
 		@review = Review.new(review_params)
+		# set the current product.id as the reference id to the new review when it is created.
 		@review.product_id = @product.id
 
 		# set the user_id under the review model to the current_user that is signed in.
@@ -28,6 +30,26 @@ class ReviewsController < ApplicationController
 		end
 	end
 
+	def edit
+		# no longer need to define the Review.find statement because I assigned it to a private method and used the before_action at the top.
+	end
+
+	def update
+		@review = Review.find(params[:id])
+		if @review.update(review_params)
+			redirect_to product_path(@product)
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@review.destroy
+		redirect_to product_path(@product)
+	end
+
+
+
 
 	private
 	def review_params
@@ -38,5 +60,8 @@ class ReviewsController < ApplicationController
 	def find_product
 		@product = Product.find(params[:product_id])
 	end
-	
+	# Only use find_review for the edit, update and destroy actions
+	def find_review
+		@review = Review.find(params[:id])
+	end
 end

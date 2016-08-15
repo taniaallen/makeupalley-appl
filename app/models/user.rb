@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :reviews, inverse_of: :user, dependent: :destroy
   has_many :products, through: :reviews
+  has_many :comments, inverse_of: :user, dependent: :destroy
+  has_many :topics, through: :comments
 end

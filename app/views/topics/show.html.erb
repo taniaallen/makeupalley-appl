@@ -1,0 +1,7 @@
+<h3><%= @topic.title %></h3>
+
+<%= @topic.content %><br>
+
+<%= link_to 'Reply to Thread', new_topic_comment_path(@topic) %>
+
+<%= render @topic.comments %>
