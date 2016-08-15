@@ -1,4 +1,4 @@
-<%= form_for([@product, @product.reviews.build]) do |f| %>
+<%= simple_form_for([@product, @product.reviews.build]) do |f| %>
 	<%= f.text_field :title, placeholder: 'Title' %><br>
 	<%= f.text_area :review, placeholder: 'Review'  %><br>
 	<!-- ID on div will be targeted by the script so that it will replace the original input for rating -->
