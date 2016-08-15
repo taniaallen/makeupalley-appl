@@ -1,10 +1,6 @@
- <h3> Reviews: </h3>
-  <% @previews.each do |review| %>
-  	<section>
-      <p> Title: <%= review.title %> </p>
-      <p> Author: <%= review.user.email %> </p>
-      <p> <%= review.review %> </p>
-      <p> Rating: <%= review.rating %> </p>
-  	</section>
-  <% end %>
-</ul>
+<section>
+	<p> Title: <%= review.title %> </p>
+	<p> Author: <%= review.user.email %> </p>
+	<p> <%= review.review %> </p>
+	<p> Rating: <%= review.rating %> </p>
+</section>

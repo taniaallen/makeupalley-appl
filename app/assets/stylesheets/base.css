@@ -6,13 +6,23 @@ body {
 }
 
 header {
-	background: url("./images/crushed-makeup.jpg");
+	background: url("crushed-makeup.jpg");
 	background-size: cover;
 	background-position: center;
 	width: 100%;
 	padding-bottom: 30%;
 	top: 0;
 	
+}
+
+ul li {
+	list-style-type: none;
+	text-align: left;
+}
+
+img {
+	width: 400px;
+	height: 400px;
 }
 
 .hero-title {
@@ -30,4 +40,12 @@ h2 {
 
 .new_user {
 	margin-bottom: 5%;
+}
+
+.navbar-links {
+	display: inline-block;
+}
+
+.navbar-links ul li {
+	float: left;
 }
