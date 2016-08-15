@@ -45,7 +45,7 @@
         <div class="navbar-header">
           <%= link_to "Product Reviews", products_path, class: "navbar-brand" %>
           <%= link_to "Forum", topics_path, class: "navbar-brand" %>
-<!--           Logged in as <strong><%= current_user.email %></strong> -->
+          <div class="navbar-header navbar-brand">Hello <strong><%= current_user.email %></strong></div>
         </div>
       </div>
     </nav>
