@@ -16,20 +16,6 @@
 
 
   <body>
-
-
-
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>
-
-
   	<% if notice %>
   	  <p class="alert alert-success"><%= notice %></p>
   	<% end %>
@@ -39,13 +25,34 @@
 
       <% if user_signed_in? %>
 
-    <nav>
-      <ul>
-          <li><%= link_to "Product Reviews", products_path  %></li>
-          <li><%= link_to "Forum", topics_path  %></li>
-      </ul>
 
+    <nav class="navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <%= link_to "Product Reviews", products_path, class: "navbar-brand" %>
+          <%= link_to "Forum", topics_path, class: "navbar-brand" %>
+<!--           Logged in as <strong><%= current_user.email %></strong> -->
+        </div>
+
+          <% if user_signed_in? %>
+
+          <ul class="nav navbar-nav">
+            
+            <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+          </ul>
+            
+          <% else %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
+            <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+          </ul>
+            |
+            
+          <% end %>
+      </div>
     </nav>
+
  <% end %>
 
     <%= yield %>
