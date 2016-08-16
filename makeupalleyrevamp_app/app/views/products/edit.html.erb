@@ -4,13 +4,13 @@
 
 <%= form_for @product do |f| %>
 
-	<div>
+	<div class="form-group">
  	<%= f.fields_for :review do |rc_fields| %>
-	   <%= rc_fields.text_field :title, placeholder: 'Title' %><br>
-	    <%= rc_fields.text_area :review, placeholder: 'Review' %><br>
-	    <%= rc_fields.number_field :rating, placeholder: 'Rating' %><br>
+	   <%= rc_fields.text_field :title, placeholder: 'Title', class: "form-control" %><br>
+	    <%= rc_fields.text_area :review, placeholder: 'Review', class: "form-control" %><br>
+	    <%= rc_fields.number_field :rating, placeholder: 'Rating', class: "form-control" %><br>
 	</div>
-  		<%= f.submit "Submit Review" %>
+  		<%= f.submit "Submit Review", class: "btn btn-default" %>
   	<% end %>
 <% end %>
 <br>

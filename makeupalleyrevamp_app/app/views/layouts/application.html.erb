@@ -27,32 +27,32 @@
       <div class="container">
 
           <% if user_signed_in? %>
-
-          <ul class="nav navbar-nav">
-            
-            <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+          <div class="navbar-header navbar-brand">Hello <strong><%= current_user.email %></strong></div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Edit profile', edit_user_registration_path, class: "navbar-brand" %> </li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-brand" %></li>
           </ul>
             
           <% else %>
           <ul class="nav navbar-nav">
-            <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %></li>
-            <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+            <li><%= link_to "Sign up", new_user_registration_path, class: "navbar-brand" %></li>
+            <li><%= link_to "Login", new_user_session_path, class: "navbar-brand" %></li>
           </ul>  
           <% end %>
 
     <% if user_signed_in? %>
-        <div class="navbar-header">
+        <div class="navbar-header .col-md-4">
           <%= link_to "Product Reviews", products_path, class: "navbar-brand" %>
           <%= link_to "Forum", topics_path, class: "navbar-brand" %>
-<!--           Logged in as <strong><%= current_user.email %></strong> -->
         </div>
       </div>
     </nav>
 
  <% end %>
-
+ 
+  <div class="container">
     <%= yield %>
+  </div>
 
   </body>
 </html>
