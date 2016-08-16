@@ -5,11 +5,16 @@
 <%= form_for @product do |f| %>
   <div>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.label :image %>
+    <%= f.text_field :img, class: 'form-control' %>
   </div>
   <div>
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: 'form-control' %>
   </div>
+
+  <%= f.submit "Submit", class: "btn btn-default" %>
+  <% end %>
 
 <%= link_to "Back to Products", products_path %>

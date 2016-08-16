@@ -8,6 +8,10 @@
 <div class="product-description">
 	<p><%= @product.description %></p>
 </div>
+<div>
+	<%= link_to 'Delete', product_path(@product), method: :delete, data: { 
+		confirm: "Are you sure?" } %>
+</div>
 
 <div class="write-review">
 	<%= link_to 'Write a Review', new_product_review_path(@product) %>
