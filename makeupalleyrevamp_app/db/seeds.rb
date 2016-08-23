@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.create({
-	name: "Aveeno Ultra Calming Moisturizer with SPF 15",
-	description: "Aveeno Ultracalming Daily Moisturizer with SPF 15 is clinically proven to reduce visible redness in as little as 1 week. Formulated with soothing botanicals including feverfew to calm and soothe irritated skin. Non-Comodogenic. Hypoallergenic. Gentle enough for everyday use.",
-	img: "https://img.makeupalley.com/2/9/8/2/959321.JPG"
+	name: "Revlon Colorstay Eyeliner",
+	description: "This Revlon Colorstay Eyeliner will stay looking bold and colorful all day long. It is waterproof and will not smear easily. In addition, the Revlon waterproof eyeliner comes with an easy-to-use pull-out sharpener.",
+	img: "https://smedia.webcollage.net/rwvfp/wc/cp/16102991/module/cpwalmart/_cp/products/1414527274246/tab-d2ae7277-b861-4242-8042-25563b500aa6/bf119c2c-1b0c-4531-a873-a7c6d3ce1904.jpg.w480.jpg"
 	})
 
 Review.create({
@@ -19,7 +19,7 @@ Review.create({
 	user_id: 1
 	})
 
-Topic.create({
-	title: "What is your favorite drugstore foundation?",
-	content: "Hi everyone! I'm new to this makeup thing and I want to start using some but I need a little guidance. I have a small budget and I plan on building my starter set from items I can find at the drugstore. So my question is: What is your favorite drugstore foundation for acne prone skin??"
-	})
+# Topic.create({
+# 	title: "What is your favorite drugstore foundation?",
+# 	content: "Hi everyone! I'm new to this makeup thing and I want to start using some but I need a little guidance. I have a small budget and I plan on building my starter set from items I can find at the drugstore. So my question is: What is your favorite drugstore foundation for acne prone skin??"
+# 	})

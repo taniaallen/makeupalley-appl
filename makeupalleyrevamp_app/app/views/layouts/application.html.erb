@@ -28,15 +28,16 @@
 
           <% if user_signed_in? %>
             <div class="dropdown pull-right arrow">
-              <a class="navbar-brand" data-toggle="dropdown">Hello <strong><%= current_user.email %></strong></a>
+              <a class="navbar-brand" data-toggle="dropdown">Hello <strong><%= current_user.email %></strong> <span class="glyphicon glyphicon-menu-down"></span></a>
+
               <ul class="dropdown-menu">
                 <li><%= link_to 'Edit profile', edit_user_registration_path, class: "navbar-brand" %> </li>
                 <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-brand" %></li>
               </ul>
             </div>
 
-          <% else %>
-          <ul class="nav navbar-nav">
+          <% elsif controller_name != 'registrations' && controller_name != 'sessions' %>
+          <ul class="nav navbar-nav .col-md-8">
             <li><%= link_to "Sign up", new_user_registration_path, class: "navbar-brand" %></li>
             <li><%= link_to "Login", new_user_session_path, class: "navbar-brand" %></li>
           </ul>  
