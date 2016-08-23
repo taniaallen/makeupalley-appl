@@ -27,7 +27,9 @@ img {
 
 .hero-title {
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 3.5em;
+	margin-top: 0;
+	color: #5E5E5E;
 
 
 }
@@ -49,7 +51,20 @@ h2 {
 .navbar ul li {
 	float: left;
 }
+/* Pointer cursor for link hover */
 
 a:hover {
 	cursor: pointer;
 }
+
+/* Members Forum Styling */
+
+.new-post-link {
+	padding-bottom: 10px;
+}
+
+.topic-title {
+	font-size: 1.5em;
+}
+
+

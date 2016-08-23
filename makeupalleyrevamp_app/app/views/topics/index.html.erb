@@ -1,14 +1,13 @@
 <h1>Member Forum</h1>
 <h4>Chat with members about all things Makeup!</h4>
-<div><h2><%= link_to 'Add a new Topic!', new_topic_path %></h2></div>
-
 <div>
-	<h4>Latest Topics</h4>
+	<h2>Latest Topics</h2>
+	<div class="new-post-link"><h4><%= link_to 'Post a new Topic!', new_topic_path %></h4></div>
 	<% @topics.each do |t| %>
 
 		<ul>
 			<%= link_to t do %>
-				<li><%= t.title %></li>
+				<li class="topic-title"><%= t.title %></li>
 			<% end %>
 		</ul>
 	<% end %>
