@@ -1,0 +1,51 @@
+/* Styling for header and basic styling*/
+
+body {
+	text-align: center;
+	font-family: 'Reem Kufi', sans-serif;
+}
+
+header {
+	background: url("crushed-makeup.jpg");
+	background-size: cover;
+	background-position: center 30%;
+	width: 100%;
+	padding-bottom: 20%;
+	top: 0;
+	
+}
+
+ul li {
+	list-style-type: none;
+	text-align: left;
+}
+
+img {
+	width: 400px;
+	height: 400px;
+}
+
+.hero-title {
+	text-align: center;
+	font-size: 2.5em;
+
+
+}
+
+h2 {
+	margin: 2%;
+	color:#994365;
+	font-size: 2.5em;
+}
+
+.new_user {
+	margin-bottom: 5%;
+}
+
+.navbar {
+	display: inline-block;
+}
+
+.navbar ul li {
+	float: left;
+}

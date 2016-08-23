@@ -1,0 +1,18 @@
+<h1>Edit Your Review</h1>
+
+<div class="form-group">
+	<%= form_for([@product, @review]) do |f| %>
+		<%= f.text_field :title, class: "form-control" %>
+		<%= f.text_area :review, class: "form-control" %>
+		<div id="rating-form"><label>Rating</label></div>
+		<%= f.submit 'Update Review', class: "btn btn-default" %>
+	<% end %>
+</div>
+<%= link_to 'Cancel and return to product', product_path(@product) %>
+
+<script>
+$('#rating-form').raty({
+	path: '/assets/',
+	scoreName: 'review[rating]'
+});
+</script>

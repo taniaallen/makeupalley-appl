@@ -1,0 +1,9 @@
+<h1>Edit Your Topic</h1>
+
+<%= simple_form_for @topic do |t| %>
+	<%= t.input :title %>
+	<%= t.input :content %>
+	<%= t.button :submit %>
+<% end %>
+
+<%= link_to 'Cancel and return to topic', topic_path(@topic) %>

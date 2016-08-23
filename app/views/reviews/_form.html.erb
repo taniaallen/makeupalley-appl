@@ -1,0 +1,20 @@
+
+<div class="form-group">
+	<%= simple_form_for([@product, @product.reviews.build]) do |f| %>
+		<%= f.text_field :title, placeholder: 'Title', class: "form-control" %><br>
+		<%= f.text_area :review, placeholder: 'Review', class: "form-control"  %><br>
+		<!-- ID on div will be targeted by the script so that it will replace the original input for rating -->
+		<div id="rating-form"><label>Rating</label></div>
+		<%= f.submit "Submit Review", class: 'btn btn-default' %>
+	<% end %>
+</div>
+
+<%= link_to 'Cancel and return to product', product_path(@product) %>
+
+<!-- script tag provided by Jacob Overgaard's raty-fa.js (details in README) -->
+<script>
+$('#rating-form').raty({
+	path: '/assets/',
+	scoreName: 'review[rating]'
+});
+</script>

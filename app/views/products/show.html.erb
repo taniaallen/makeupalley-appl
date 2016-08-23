@@ -1,0 +1,43 @@
+<h2><%= @product.name %></h2>
+<img src="<%= @product.img %>"/>
+
+<h2>Average Rating</h2>
+<!-- The div average-review-rating will evaluate the data score which pulls in the average_review instance variable stored in the Products Controller -->
+<div class="average-review-rating" data-score=<%= @average_review %>></div>
+
+<div class="product-description">
+	<p><%= @product.description %></p>
+</div>
+<div>
+	<%= link_to 'Delete', product_path(@product), method: :delete, data: { 
+		confirm: "Are you sure?" } %>
+</div>
+
+<div class="write-review">
+	<%= link_to 'Write a Review', new_product_review_path(@product) %>
+</div><br>
+
+<div>
+	<%= render @product.reviews %>
+</div>
+
+<!-- script tag provided by Jacob Overgaard's raty-fa.js (details in README) -->
+<script>
+	$('.review-rating').raty({
+		readOnly: true,
+		score: function(){
+			return $(this).attr('data-score');
+		},
+		path: '/assets/'
+	});
+</script>
+
+<script>
+$('.average-review-rating').raty({
+	readOnly: true,
+	path: '/assets/',
+	score: function(){
+		return $(this).attr('data-score')
+	}
+});
+</script>

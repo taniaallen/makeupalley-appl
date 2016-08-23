@@ -1,0 +1,16 @@
+<h2>Products Index</h2>
+<%= link_to "Add A Product", new_product_path %>
+
+<div class="row">
+
+<% @products.each do |product| %>
+	<div class="col-md-10">
+		<ul class="products-list">
+			<%= link_to product do %>
+				<li><%= product.name %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
+</div>
