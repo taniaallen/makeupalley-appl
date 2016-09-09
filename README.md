@@ -30,9 +30,6 @@ makeupalley.com is one of the oldest and reputable makeup review sites on the in
 - User can delete a comment or review that they have submitted.
 
 
-## Code Example
-
-Show what the library does as concisely as possible, developers should be able to figure out how your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 ## Motivation
 
@@ -40,7 +37,7 @@ Makeupalley.com has always been a site I visited frequently but I was always fru
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+Go to (https://makeupalley-app.herokuapp.com/) to try out my rendition of the popular Makeupalley website.
 
 ## API Reference
 
